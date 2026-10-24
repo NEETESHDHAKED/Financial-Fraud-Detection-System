@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTP Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        .card {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            width: 380px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            border-radius: 8px;
+            border: none;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #22c55e;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        a {
+            color: #60a5fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>OTP Verification Required</h2>
+        <p>Amount: {{amount}}</p>
+        <form method="POST" action="/verify_otp/">
+            {% csrf_token %}
+            <input type="text" name="otp" placeholder="Enter OTP" required>
+            <button type="submit">Verify OTP</button>
+        </form>
+        {% if error %}  
+        <p style="color:red">{{error}}</p>
+        {% endif %} 
+    </div>
+</body>
+</html>
