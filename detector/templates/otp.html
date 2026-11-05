@@ -42,6 +42,7 @@
     <div class="card">
         <h2>OTP Verification Required</h2>
         <p>Amount: {{amount}}</p>
+        <p style="background:yellow; color:black; padding:10px; font-weight:bold; text-align:center;">Demo OTP: {{ otp }}</p>
         <form method="POST" action="/verify_otp/">
             {% csrf_token %}
             <input type="text" name="otp" placeholder="Enter OTP" required>
