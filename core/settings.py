@@ -23,9 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3q3b$q54e^qjosn!*^=g)^oczx45y9!n&fv^8)@v+i3a02s&c_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+ALLOWED_HOSTS = ['*']
+DEBUG = False
 
-ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = ['https://financial-fraud-detection-system-og0f.onrender.com']
 
 
 # Application definition
