@@ -23,8 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3q3b$q54e^qjosn!*^=g)^oczx45y9!n&fv^8)@v+i3a02s&c_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+DEBUG = False
 ALLOWED_HOSTS = ['*']
-DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ['https://financial-fraud-detection-system-og0f.onrender.com']
 
