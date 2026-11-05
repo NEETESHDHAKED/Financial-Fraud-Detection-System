@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-3q3b$q54e^qjosn!*^=g)^oczx45y9!n&fv^8)@v+i3a02s&c_
 
 # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ['*']
-DEBUG = False
+DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ['https://financial-fraud-detection-system-og0f.onrender.com']
 
